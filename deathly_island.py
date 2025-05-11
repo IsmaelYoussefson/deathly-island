@@ -1,4 +1,4 @@
-game = input("Type 'ON'\n").upper()
+game = input("Click 'ON'\n").upper()
 if  game == "ON":
     print(r'''
  b                            ,,,,                    ,d
@@ -39,15 +39,33 @@ Y8ba,a   `"Ya,_          (()(  ..  ))(      _aP"   ad88888b
       P                           `'                   P'
         ''')
     print("DEATHLY ISLAND is a world where only the strongest and the smartest warriors survive.")
-    warrior = input("My name is Cindy — your charming guide in this magnificent world. What is your name, warrior? ")
+    warrior = input("My name is Lilith Nightshade — your charming guide in this magnificent world. What is your name, warrior? ")
     print(f"Welcome, {warrior}. Your mission is to stay alive until sunrise — it’s your only way back home.")
-    direction = input('''You stand before two doors: one to your right, one to your left.
-                    Type 'LEFT' or 'RIGHT'.\n''').upper()
+    direction = input("You stand before two doors: one to your right, one to your left.\n"
+                      r'''
+   ________.-.                .-.________
+  (_______( / \----      ----/ \ )_______)
+     (___()\)  )            (  (/()___)
+      (__()                      ()__)
+       (_()___/----      ----\___()_)
+       
+       '''
+                      "    Type 'LEFT' or 'RIGHT'.\n").upper()
     if direction == "RIGHT":
-        first_challenge = input(f"This is your first challenge, {warrior}.\nTwo dark holes lie before you, just large enough to fit a human head.\nYou have to choose one to put your head in, \n-Hole 'A' looks clean.\n-Hole 'B' has red stains around the edges — like something splashed out.\nWhich hole do you choose, {warrior}?\n     Type 'A' or 'B'.\n").upper()
+        first_challenge = input(f"This is your first challenge, {warrior}.\n"
+        "Two dark holes lie before you, just large enough to fit a human head.\n"
+        "You have to choose one to put your head in, \n"
+        "-Hole 'A' looks clean.\n"
+        "-Hole 'B' has red stains around the edges — like something splashed out.\n"
+        f"Which hole do you choose, {warrior}?\n"
+        "           Type 'A' or 'B'.\n").upper()
         if first_challenge == "B":
             print("You put your head in hole B, It's just red paint. No damage taken.")
-            second_challenge = input(f"Nice choice, {warrior}. You’ve survived this time.\nNow, you face another choice:\n-Option 1: A grand hall filled with beautiful women dancing and singing, beckoning you to join.\n-Option 2: A filthy hallway filled with high-pitched screams echoing from within.\n       Type '1' or '2'.\n").upper()
+            second_challenge = input(f"Nice choice, {warrior}. You’ve survived this time.\n"
+            "Now, you face another choice:\n"
+            "-Option 1: A grand hall filled with beautiful women dancing and singing, beckoning you to join.\n"
+            "-Option 2: A filthy hallway filled with high-pitched screams echoing from within.\n"
+            "           Type '1' or '2'.\n").upper()
             if second_challenge == "2":
                 print(r'''
 88888888888888888888888888888888888888888888888888888888888888888888888
@@ -73,9 +91,16 @@ Y8ba,a   `"Ya,_          (()(  ..  ))(      _aP"   ad88888b
 88  _.'     !'|   .' | /                       \|  `  |  `.    |`.|  88
 88 vanishing point 888888888888888888888888888888888888888888888 fL 888
                 
-You bravely entered the terrifying hall — but it was only an illusion to scare the wicked. An old lady offers you shelter and gently wipes the paint from your face.
+You bravely entered the terrifying hall —
+But it was only an illusion to scare the wicked. 
+An old lady offers you shelter and gently wipes the paint from your face.
 ''')
-                third_and_last_challenge = input(f"FINAL CHALLENGE. Choose wisely, {warrior}.\nYou see three doors: one red, one yellow, one blue.\nType 'R' for red, 'Y' for yellow, you got the gist...").upper()
+                third_and_last_challenge = input(f"FINAL CHALLENGE. Choose wisely, {warrior}.\n"
+                "Three doors stand before you:\n"
+                "1) Red – forged from ancient wood\n"
+                "2) Yellow – inlaid with precious metals\n"
+                "3) Blue – bound in supple animal hide\n\n"
+                "           Type R, Y, or B to choose: ").upper()
                 if third_and_last_challenge == "R":
                     print(r'''
      ______
@@ -93,24 +118,26 @@ You bravely entered the terrifying hall — but it was only an illusion to scare
                      
 The door glows and pulls you into a portal — you’re home, safe and sane!
                     
-                                                                   888            
-                                                                   888            
-                                                                   888            
-                     .d8888b .d88b. 88888b.  .d88b. 888d888 8888b. 888888.d8888b  
-                     d88P"   d88""88b888 "88bd88P"88b888P"      "88b888   88K      
-                     888     888  888888  888888  888888    .d888888888   "Y8888b. 
-                     Y88b.   Y88..88P888  888Y88b 888888    888  888Y88b.      X88 
-                     "Y8888P "Y88P" 888  888 "Y88888888    "Y888888 "Y888 88888P' 
-                     .                            888                              
-                     .                       Y8b d88P                              
-                     .                        "Y88P"
+                                              888            
+                                              888            
+                                              888            
+.d8888b .d88b. 88888b.  .d88b. 888d888 8888b. 888888.d8888b  
+d88P"   d88""88b888 "88bd88P"88b888P"      "88b888   88K      
+888     888  888888  888888  888888    .d888888888   "Y8888b. 
+Y88b.   Y88..88P888  888Y88b 888888    888  888Y88b.      X88 
+"Y8888P "Y88P" 888  888 "Y88888888    "Y888888 "Y888 88888P' 
+                           888                              
+                       Y8b d88P                              
+                        "Y88P"
                      
 ✨YOU FINISHED THE GAME ALIVE✨
 You survived the myth. You earned your way home.''')
                 elif third_and_last_challenge == "Y":
-                    print("The moment you step through the door, a ton of gold crashes down and crushes you.\nGAME OVER")
+                    print("The moment you step through the door, a ton of gold crashes down and crushes you.\n"
+                    "GAME OVER!")
                 else:
-                    print("Mythical, double-headed wolves devour you as soon as you enter. Brutal.\nGAME OVER")
+                    print("Mythical, double-headed wolves devour you as soon as you enter. Brutal.\n"
+                    "GAME OVER!")
             elif second_challenge == "1":
                 print(r'''The women devour you alive — they were Sirens, terrifying mythical predators luring prey with beauty.
                   ____
@@ -129,7 +156,7 @@ You survived the myth. You earned your way home.''')
                              \       / 
                               \  `--<___,
                                `._____.'           
-GAME OVER''')
+GAME OVER!''')
         elif first_challenge == "A":
             print(r'''
                .-"      "-.
@@ -144,7 +171,7 @@ GAME OVER''')
                \          /
                 `--------`
 You’re sucked into the clean hole like a pressed vegetable. Not even a drop of blood remains.
-GAME OVER''')
+GAME OVER!''')
     else:
         print(fr'''A raging Minotaur was waiting behind the door. You didn’t stand a chance, {warrior}.
                                                                        
